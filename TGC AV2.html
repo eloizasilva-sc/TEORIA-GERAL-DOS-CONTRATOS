@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão de Teoria Geral dos Contratos - AV 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Fundo suave, não cansativo */
+        }
+        .contract-header {
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contract-header:hover {
+            background-color: #eef2ff;
+        }
+        .content-hidden {
+            max-height: 0;
+            overflow: hidden;
+            padding-top: 0;
+            padding-bottom: 0;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        }
+        .content-visible {
+            max-height: 3000px; /* Suficientemente grande */
+            padding-top: 16px; /* p-4 */
+            padding-bottom: 16px; /* p-4 */
+            transition: max-height 0.6s ease-in, padding 0.6s ease-in;
+        }
+        .quiz-option {
+            transition: background-color 0.15s;
+        }
+        .quiz-option:hover:not(.disabled) {
+            background-color: #f3f4f6;
+            cursor: pointer;
+        }
+        .correct {
+            background-color: #d1fae5 !important; /* green-100 (Associação com "certo") */
+            border-left: 5px solid #059669 !important; /* green-600 */
+        }
+        .incorrect {
+            background-color: #fee2e2 !important; /* red-100 (Associação com "errado") */
+            border-left: 5px solid #dc2626 !important; /* red-600 */
+        }
+        .disabled {
+            pointer-events: none;
+        }
+        /* Custom Negrito para Assertividade */
+        .assertive {
+            font-weight: 700; /* Extra bold */
+            color: #1e40af; /* Azul Escuro: Foco e Estabilidade */
+        }
+        .highlight-type {
+            background-color: #fcfcfc; /* Branco para contraste */
+            border: 1px solid #e5e7eb;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <div class="max-w-5xl mx-auto">
+        <header class="text-center mb-12 p-8 bg-white rounded-xl shadow-2xl border-b-4 border-indigo-600">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-indigo-800">🎯 Revisão de Teoria Geral dos Contratos - AV 2</h1>
+            <p class="text-gray-600 mt-3 text-lg font-medium">Foco nas classificações e institutos mais cobrados pelo CC/02.</p>
+        </header>
+
+        <h2 class="text-2xl font-bold text-gray-700 mb-6 border-b pb-2">Seção 1: Conteúdo Didático</h2>
+
+        <main id="review-system" class="space-y-8">
+
+            <!-- 1. COMPRA E VEDA (Foco/Estabilidade - INDIGO) -->
+            <div class="contract-card bg-white rounded-xl shadow-lg overflow-hidden border-l-8 border-indigo-500">
+                <div class="contract-header p-6 flex justify-between items-center bg-indigo-50" onclick="toggleContent('contract-1')">
+                    <h2 class="text-2xl font-extrabold text-indigo-700">1. COMPRA E VENDA <span class="text-base font-normal">(arts. 481 a 532 do CC)</span></h2>
+                    <span id="icon-1" class="text-indigo-700 text-3xl transform transition-transform duration-300 font-light">+</span>
+                </div>
+                <div id="contract-1" class="contract-content content-hidden px-6 text-gray-800">
+                    <p class="mb-5 leading-relaxed border-b pb-4 text-sm italic text-gray-600">
+                        Conceito: O Vendedor se obriga a transferir a propriedade de um bem ao Comprador, mediante o pagamento de preço em dinheiro.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-bold text-xl text-indigo-600 flex items-center mb-3">✔ Classificações Essenciais</h3>
+                            <ul class="list-none space-y-2">
+                                <li class="p-2 bg-indigo-50 rounded-md border-l-4 border-indigo-400"><span class="assertive">Consensual</span> (Se aperfeiçoa com o acordo).</li>
+                                <li class="p-2 bg-indigo-50 rounded-md border-l-4 border-indigo-400"><span class="assertive">Bilateral</span> (Gera obrigações recíprocas).</li>
+                                <li class="p-2 bg-indigo-50 rounded-md border-l-4 border-indigo-400"><span class="assertive">Oneroso</span> (Sacrifício e proveito mútuo).</li>
+                                <li class="p-2 bg-indigo-50 rounded-md border-l-4 border-indigo-400 font-semibold text-red-700"><span class="assertive">NÃO Translativo</span> (Apenas cria a obrigação; a propriedade exige <span class="assertive">tradição</span> ou <span class="assertive">registro</span>).</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-indigo-600 flex items-center mb-3">✔ Foco em Prova: Obrigações do Vendedor</h3>
+                            <ul class="list-none space-y-2">
+                                <li class="p-2 bg-white rounded-md shadow-sm border border-gray-200">Obrigação principal: <span class="assertive">Entregar a coisa</span>.</li>
+                                <li class="p-2 bg-white rounded-md shadow-sm border border-gray-200">Garantia 1: Responder por <span class="assertive">Evicção</span> (Defeito no <span class="assertive">Direito</span>).</li>
+                                <li class="p-2 bg-white rounded-md shadow-sm border border-gray-200">Garantia 2: Responder por <span class="assertive">Vícios Redibitórios</span> (Defeito na <span class="assertive">Coisa</span>).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- BLOCO: GARANTIAS CONTRATUAIS (Advertência - VERMELHO/LARANJA) -->
+                    <h3 class="font-bold text-xl text-indigo-600 mt-5 mb-3 border-t pt-4">✔ Garantias: Evicção vs. Vícios Redibitórios</h3>
+                    <div class="space-y-4 mb-5">
+                        <div class="p-3 bg-red-50 rounded-lg border-l-4 border-red-500">
+                            <p class="font-extrabold text-red-800 mb-1">Evicção (Defeito no <span class="assertive">Direito/Título</span>)</p>
+                            <p class="text-sm">Garante o uso e a propriedade da coisa. É a <span class="assertive">perda total ou parcial da coisa</span>, em virtude de <span class="assertive">sentença judicial</span> ou ato administrativo, que reconhece direito anterior de terceiro (evictor).</p>
+                            <div class="mt-2 p-2 bg-red-100 border border-red-300 rounded-md text-sm text-red-700">
+                                <span class="font-extrabold">Exemplo:</span> O vendedor vende algo que não podia vender, pois o verdadeiro dono (evictor) ganha a ação e toma o bem do comprador (evicto).
+                            </div>
+                        </div>
+                        <div class="p-3 bg-orange-50 rounded-lg border-l-4 border-orange-500">
+                            <p class="font-extrabold text-orange-800 mb-1">Vícios Redibitórios (Defeito na <span class="assertive">Coisa</span>)</p>
+                            <p class="text-sm">São <span class="assertive">defeitos ou vícios ocultos</span> que tornam a coisa imprópria para o fim a que se destina ou lhe diminuem o valor. Ação <span class="assertive">Redibitória</span> (devolver o bem) ou <span class="assertive">Estimatoria</span> (abatimento no preço).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. PERMUTA (Foco/Calma - CIANO) -->
+            <div class="contract-card bg-white rounded-xl shadow-lg overflow-hidden border-l-8 border-cyan-500">
+                <div class="contract-header p-6 flex justify-between items-center bg-cyan-50" onclick="toggleContent('contract-2')">
+                    <h2 class="text-2xl font-extrabold text-cyan-700">2. PERMUTA <span class="text-base font-normal">(art. 533 do CC)</span></h2>
+                    <span id="icon-2" class="text-cyan-700 text-3xl transform transition-transform duration-300 font-light">+</span>
+                </div>
+                <div id="contract-2" class="contract-content content-hidden px-6 text-gray-800">
+                    <p class="mb-5 leading-relaxed border-b pb-4 text-sm italic text-gray-600">
+                        Conceito: Troca de uma coisa por outra coisa. Aplica-se a regra da Compra e Venda, no que couber.
+                    </p>
+
+                    <h3 class="font-bold text-xl text-cyan-600 flex items-center mb-3">✔ Classificações</h3>
+                    <ul class="list-none space-y-2 mb-4">
+                        <li class="p-2 bg-cyan-100 rounded-md border-l-4 border-cyan-400"><span class="assertive">Bilateral, Oneroso, Consensual, Comutativo.</span></li>
+                    </ul>
+
+                    <h3 class="font-bold text-xl text-cyan-600 flex items-center mb-3">⚠️ Foco em Prova: Torna (Dinheiro)</h3>
+                    <div class="space-y-4 mb-5">
+                        <div class="p-3 bg-emerald-100 rounded-lg border-l-4 border-emerald-500">
+                            <p class="font-extrabold text-emerald-800">Situação 1: <span class="assertive">Permuta</span></p>
+                            <p class="text-sm">Ocorre se o dinheiro for <span class="assertive">acessório</span>, ou seja, se a torna for <span class="assertive">menor</span> que o valor do bem de menor expressão.</p>
+                        </div>
+                        <div class="p-3 bg-orange-100 rounded-lg border-l-4 border-orange-500">
+                            <p class="font-extrabold text-orange-800">Situação 2: <span class="assertive">Compra e Venda</span></p>
+                            <p class="text-sm">Ocorre se o dinheiro for o <span class="assertive">elemento preponderante</span>, ou seja, se a torna for <span class="assertive">igual ou maior</span> que o valor do bem de menor expressão.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. DOAÇÃO (Liberalidade/Atenção - ROSA/ROXO) -->
+            <div class="contract-card bg-white rounded-xl shadow-lg overflow-hidden border-l-8 border-rose-500">
+                <div class="contract-header p-6 flex justify-between items-center bg-rose-50" onclick="toggleContent('contract-3')">
+                    <h2 class="text-2xl font-extrabold text-rose-700">3. DOAÇÃO <span class="text-base font-normal">(arts. 538 a 564)</span></h2>
+                    <span id="icon-3" class="text-rose-700 text-3xl transform transition-transform duration-300 font-light">−</span>
+                </div>
+                <div id="contract-3" class="contract-content content-visible px-6 text-gray-800">
+                    <p class="mb-5 leading-relaxed border-b pb-4 text-sm italic text-gray-600">
+                        Conceito: Ato de <span class="assertive">liberalidade</span> em que o Doador transfere bens ou vantagens para o Donatário, <span class="assertive">gratuitamente</span>.
+                    </p>
+
+                    <h3 class="font-bold text-xl text-rose-600 flex items-center mb-3">✔ Classificações</h3>
+                    <ul class="list-none space-y-2 mb-4">
+                        <li class="p-2 bg-rose-100 rounded-md border-l-4 border-rose-400"><span class="assertive">Gratuito</span> (Oneroso apenas no caso de modal, mas prevalece a liberalidade).</li>
+                        <li class="p-2 bg-rose-100 rounded-md border-l-4 border-rose-400"><span class="assertive">Unilateral</span> (Obrigações para uma parte).</li>
+                        <li class="p-2 bg-rose-100 rounded-md border-l-4 border-rose-400"><span class="assertive">Consensual</span> (Exige aceitação do Donatário).</li>
+                    </ul>
+
+                    <h3 class="font-bold text-xl text-rose-600 flex items-center mb-3 border-t pt-4">⭐⭐⭐ Tipos de Doação (Foco em Revogação e Proteção)</h3>
+                    <div class="space-y-4 mb-5">
+                        
+                        <!-- Pura (Padrão, Foco) -->
+                        <div class="highlight-type border-l-4 border-indigo-400 bg-indigo-50">
+                            <p class="font-extrabold text-indigo-800 mb-1 text-lg">1. Doação Pura</p>
+                            <p class="text-sm italic mb-2">Conceito: É o ato de mera liberalidade, sem impor qualquer restrição, encargo ou condição ao donatário.</p>
+                            <div class="p-2 bg-indigo-100 border border-indigo-300 rounded-md text-sm text-indigo-800">
+                                <span class="font-extrabold">Exemplo:</span> Pai doa um apartamento ao filho sem exigir nada em troca.
+                                <br><span class="font-extrabold text-green-700">Consequência:</span> Revogável apenas por <span class="assertive">Ingratidão</span>.
+                            </div>
+                        </div>
+
+                        <!-- Condicional (Alerta de Incerteza - Laranja Suave) -->
+                        <div class="highlight-type border-l-4 border-orange-400 bg-orange-50">
+                            <p class="font-extrabold text-orange-800 mb-1 text-lg">2. Doação Condicional</p>
+                            <p class="text-sm italic mb-2">Conceito: Subordinada a um evento futuro e <span class="assertive">incerto</span> (condição suspensiva ou resolutiva).</p>
+                            <div class="p-2 bg-orange-100 border border-orange-300 rounded-md text-sm text-orange-800">
+                                <span class="font-extrabold">Exemplo:</span> Doação de um carro a um estudante, sob a condição de que ele <span class="assertive">seja aprovado</span> no exame da OAB.
+                                <br><span class="font-extrabold text-indigo-700">Consequência:</span> O negócio só se aperfeiçoa ou se desfaz com a ocorrência da condição.
+                            </div>
+                        </div>
+
+                        <!-- Modal (Obrigação/Encargo - Ciano/Azul Claro para Tarefa) -->
+                        <div class="highlight-type border-l-4 border-cyan-500 bg-cyan-50">
+                            <p class="font-extrabold text-cyan-800 mb-1 text-lg">3. Doação Modal (com Encargo)</p>
+                            <p class="text-sm italic mb-2">Conceito: O doador impõe uma <span class="assertive text-indigo-700">obrigação</span> (ônus) ao donatário, que <span class="assertive">não</span> se confunde com a contraprestação, mantendo a essência da liberalidade.</p>
+                            <div class="p-2 bg-cyan-100 border border-cyan-300 rounded-md text-sm text-cyan-800">
+                                <span class="font-extrabold">Exemplo:</span> Doação de um terreno para o Município, com o encargo de construir uma creche no local.
+                                <br><span class="font-extrabold text-red-700">Consequência:</span> Pode ser <span class="assertive text-red-700">revogada</span> por <span class="assertive">inexecução do encargo</span> (Art. 555 CC). O doador pode exigir o cumprimento do encargo ou revogar.
+                            </div>
+                        </div>
+
+                        <!-- Remuneratória (Recompensa/Gratidão - Lima/Verde para Positivo) -->
+                        <div class="highlight-type border-l-4 border-lime-500 bg-lime-50">
+                            <p class="font-extrabold text-lime-800 mb-1 text-lg">4. Doação Remuneratória</p>
+                            <p class="text-sm italic mb-2">Conceito: Feita em retribuição a um serviço prestado ao doador, sem que houvesse obrigação legal ou judicial de pagar por ele.</p>
+                            <div class="p-2 bg-lime-100 border border-lime-300 rounded-md text-sm text-lime-800">
+                                <span class="font-extrabold">Exemplo:</span> Doação de um relógio de luxo a um médico que salvou a vida do doador, mas que foi atendido pelo SUS e não cobrou honorários.
+                                <br><span class="font-extrabold text-green-700">Proteção:</span> <span class="assertive text-green-700">NÃO pode ser revogada por ingratidão</span>, pois é vista como uma forma de pagamento (Art. 564, III CC).
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-bold text-xl text-rose-600 flex items-center mb-3 border-t pt-4">❌ Proibições e Revogação (Foco em Nulidade - Vermelho)</h3>
+                    <ul class="list-disc list-inside ml-4 space-y-2 pb-4 text-red-700">
+                        <li><span class="assertive">Doação Universal:</span> Nula se abranger todos os bens sem reserva de parte ou renda para a subsistência do doador (art. 548 CC).</li>
+                        <li><span class="assertive">Doação Inoficiosa:</span> Nula no que exceder a parte disponível (legítima).</li>
+                        <li><span class="assertive">Revogação por Ingratidão:</span> Aplica-se se o donatário atentar contra a vida, cometer injúria grave, calúnia, ofensa física ou negar alimentos ao doador. <span class="assertive text-indigo-700">Prazo: 1 ano.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. MÚTUO (Consumo/Troca - ÂMBAR/LARANJA) -->
+            <div class="contract-card bg-white rounded-xl shadow-lg overflow-hidden border-l-8 border-amber-500">
+                <div class="contract-header p-6 flex justify-between items-center bg-amber-50" onclick="toggleContent('contract-4')">
+                    <h2 class="text-2xl font-extrabold text-amber-700">4. MÚTUO (Empréstimo de Consumo) <span class="text-base font-normal">(arts. 586 a 592)</span></h2>
+                    <span id="icon-4" class="text-amber-700 text-3xl transform transition-transform duration-300 font-light">+</span>
+                </div>
+                <div id="contract-4" class="contract-content content-hidden px-6 text-gray-800">
+                    <p class="mb-5 leading-relaxed border-b pb-4 text-sm italic text-gray-600">
+                        Conceito: Empréstimo de coisa <span class="assertive">FUNGÍVEL</span> (consumível), onde o mutuário se torna <span class="assertive">dono</span> e deve restituir <span class="assertive">outra da mesma espécie</span>, qualidade e quantidade.
+                    </p>
+
+                    <h3 class="font-bold text-xl text-amber-600 flex items-center mb-3">✔ Classificações</h3>
+                    <ul class="list-none space-y-2 mb-4">
+                        <li class="p-2 bg-amber-100 rounded-md border-l-4 border-amber-400"><span class="assertive">Real</span> (Só se perfaz com a entrega da coisa).</li>
+                        <li class="p-2 bg-amber-100 rounded-md border-l-4 border-amber-400"><span class="assertive">Translativo</span> (Transfere a propriedade ao mutuário).</li>
+                        <li class="p-2 bg-amber-100 rounded-md border-l-4 border-amber-400">Pode ser <span class="assertive">Gratuito</span> ou <span class="assertive">Oneroso</span> (Mútuo Feneratício/com juros).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 5. COMODATO (Conservação/Devolução - VERDE/ESMERALDA) -->
+            <div class="contract-card bg-white rounded-xl shadow-lg overflow-hidden border-l-8 border-emerald-500">
+                <div class="contract-header p-6 flex justify-between items-center bg-emerald-50" onclick="toggleContent('contract-5')">
+                    <h2 class="text-2xl font-extrabold text-emerald-700">5. COMODATO (Empréstimo de Uso) <span class="text-base font-normal">(arts. 579 a 585)</span></h2>
+                    <span id="icon-5" class="text-emerald-700 text-3xl transform transition-transform duration-300 font-light">+</span>
+                </div>
+                <div id="contract-5" class="contract-content content-hidden px-6 text-gray-800">
+                    <p class="mb-5 leading-relaxed border-b pb-4 text-sm italic text-gray-600">
+                        Conceito: Empréstimo <span class="assertive">GRATUITO</span> de coisa <span class="assertive">INFUNGÍVEL</span>, que deve ser devolvida a <span class="assertive">mesma</span>.
+                    </p>
+
+                    <h3 class="font-bold text-xl text-emerald-600 flex items-center mb-3">✔ Classificações</h3>
+                    <ul class="list-none space-y-2 mb-4">
+                        <li class="p-2 bg-emerald-100 rounded-md border-l-4 border-emerald-400"><span class="assertive">Real</span> (Aperfeiçoa-se com a entrega).</li>
+                        <li class="p-2 bg-emerald-100 rounded-md border-l-4 border-emerald-400"><span class="assertive">Sempre Gratuito</span>.</li>
+                        <li class="p-2 bg-emerald-100 rounded-md border-l-4 border-emerald-400">Objeto: <span class="assertive">Infungível</span> (deve ser devolvida a mesma coisa).</li>
+                    </ul>
+
+                    <h3 class="font-bold text-xl text-emerald-600 flex items-center mb-3 border-t pt-4">⚠️ Responsabilidade do Comodatário</h3>
+                    <ul class="list-disc list-inside ml-4 space-y-1 pb-4">
+                        <li><span class="assertive">Dever de conservação:</span> Responde por danos se negligenciar ou usar a coisa em desacordo com o contrato.</li>
+                        <li class="text-red-700"><span class="assertive text-red-700">Risco:</span> Se, em risco, preferir salvar seus próprios bens em detrimento do bem emprestado, responderá pelo dano (Art. 583 CC).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 6. LOCAÇÃO (Aluguel/Complexidade - VERMELHO) -->
+            <div class="contract-card bg-white rounded-xl shadow-lg overflow-hidden border-l-8 border-red-500">
+                <div class="contract-header p-6 flex justify-between items-center bg-red-50" onclick="toggleContent('contract-6')">
+                    <h2 class="text-2xl font-extrabold text-red-700">6. LOCAÇÃO <span class="text-base font-normal">(arts. 565 a 578 + Lei 8.245/91)</span></h2>
+                    <span id="icon-6" class="text-red-700 text-3xl transform transition-transform duration-300 font-light">+</span>
+                </div>
+                <div id="contract-6" class="contract-content content-hidden px-6 text-gray-800">
+                    <p class="mb-5 leading-relaxed border-b pb-4 text-sm italic text-gray-600">
+                        Conceito: O Locador cede o uso e gozo da coisa ao Locatário, mediante pagamento de <span class="assertive">aluguel</span> (remuneração).
+                    </p>
+
+                    <h3 class="font-bold text-xl text-red-600 flex items-center mb-3">✔ Classificações</h3>
+                    <ul class="list-none space-y-2 mb-4">
+                        <li class="p-2 bg-red-100 rounded-md border-l-4 border-red-400"><span class="assertive">Bilateral, Oneroso, Consensual.</span></li>
+                        <li class="p-2 bg-red-100 rounded-md border-l-4 border-red-400 text-sm italic"><span class="assertive">Imóveis Urbanos:</span> Lei do Inquilinato (<span class="assertive">Lei 8.245/91</span>).</li>
+                    </ul>
+
+                    <h3 class="font-bold text-xl text-red-600 flex items-center mb-3 border-t pt-4">❗ Benfeitorias (Foco no Locatário)</h3>
+                    <div class="p-4 bg-red-100 rounded-lg border-l-4 border-red-500">
+                        <p class="font-extrabold text-red-800 mb-2">Direitos de Indenização e Retenção:</p>
+                        <ul class="list-disc list-inside ml-4 space-y-1 text-red-700">
+                            <li><span class="assertive">Necessárias:</span> Sempre indenizáveis. Gera <span class="assertive">Retenção</span>.</li>
+                            <li><span class="assertive">Úteis:</span> Indenizáveis <span class="assertive">apenas se autorizadas</span>. Gera <span class="assertive">Retenção</span>.</li>
+                            <li><span class="assertive">Voluptuárias:</span> <span class="assertive">Não Indenizáveis</span>. Podem ser <span class="assertive">Levantadas</span> (retiradas) se não causarem estrago.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- SEÇÃO DE QUESTÕES DE PROVA -->
+        <h2 class="text-3xl font-extrabold text-gray-700 mt-12 mb-8 border-b-4 border-gray-300 pb-3">Seção 2: Questões de Prova (Teste seu Conhecimento)</h2>
+
+        <div id="quiz-container" class="bg-white p-6 sm:p-8 rounded-xl shadow-2xl">
+            <div id="quiz-progress" class="mb-6">
+                <p class="text-lg font-bold text-indigo-600">Pontuação: <span id="score">0</span> / 20</p>
+            </div>
+            <div id="questions-list" class="space-y-8">
+                <!-- Questions will be dynamically inserted here -->
+                <p class="text-gray-500 text-center">Carregando questões...</p>
+            </div>
+            <button onclick="resetQuiz()" class="mt-8 w-full py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition duration-200">
+                Reiniciar Questionário
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        // --- LÓGICA DE EXIBIÇÃO DIDÁTICA ---
+        /**
+         * Alterna a visibilidade do conteúdo de um contrato e inverte o ícone de expansão.
+         */
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id.split('-')[1]);
+
+            const isVisible = content.classList.contains('content-visible');
+
+            // Fechar outros cards abertos
+            const allContents = document.querySelectorAll('.contract-content');
+            const allIcons = document.querySelectorAll('[id^="icon-"]');
+            allContents.forEach(c => {
+                if (c.id !== id && c.classList.contains('content-visible')) {
+                    c.classList.remove('content-visible');
+                    c.classList.add('content-hidden');
+                }
+            });
+            allIcons.forEach(i => {
+                if (i.id !== ('icon-' + id.split('-')[1])) {
+                    i.textContent = '+';
+                    i.classList.remove('rotate-45');
+                }
+            });
+
+            // Abrir/Fechar o card clicado
+            if (isVisible) {
+                content.classList.remove('content-visible');
+                content.classList.add('content-hidden');
+                icon.textContent = '+';
+            } else {
+                content.classList.remove('content-hidden');
+                content.classList.add('content-visible');
+                icon.textContent = '−'; // Traço para indicar que está aberto
+            }
+        }
+
+        // --- LÓGICA DO QUESTIONÁRIO ---
+
+        const questions = [
+            {
+                q: "Qual característica distingue o contrato de Compra e Venda de um contrato de Doação, mesmo que este último tenha encargo (modal)?",
+                options: [
+                    "Sua natureza consensual.",
+                    "Ser um contrato Bilateral.",
+                    "Sua natureza Onerosa.",
+                    "Ser um contrato Comutativo.",
+                    "A exigência de tradição ou registro para transferência de domínio."
+                ],
+                answer: 2, // Sendo a Doação, mesmo modal, essencialmente gratuita.
+                explanation: "O Contrato de Compra e Venda é sempre Oneroso (há sacrifício patrimonial recíproco), enquanto a Doação, por definição, é um ato de liberalidade, sendo Gratuita, mesmo quando modal."
+            },
+            {
+                q: "Na Permuta, em qual situação o contrato se converte em Compra e Venda, conforme entendimento majoritário da doutrina?",
+                options: [
+                    "Se o objeto for um imóvel.",
+                    "Se houver pequena torna em dinheiro.",
+                    "Se o valor da torna em dinheiro for superior ou igual ao valor do bem de menor expressão.",
+                    "Se for estipulado que as despesas serão pagas integralmente por uma das partes.",
+                    "Se for um contrato realizado entre ascendentes e descendentes."
+                ],
+                answer: 2,
+                explanation: "O contrato se descaracteriza como Permuta e vira Compra e Venda se o dinheiro (torna) for o elemento preponderante, ou seja, se o valor da torna superar ou igualar o valor do outro bem."
+            },
+            {
+                q: "Qual a regra legal para as despesas na Permuta que envolve uma 'torna' em dinheiro, salvo estipulação em contrário?",
+                options: [
+                    "São integralmente pagas por quem recebeu o dinheiro.",
+                    "São integralmente pagas por quem deu o dinheiro.",
+                    "São divididas igualmente entre os permutantes.",
+                    "São pagas pelo permutante que deu a coisa de maior valor.",
+                    "São isentas, pois o contrato é de troca."
+                ],
+                answer: 2,
+                explanation: "De acordo com o art. 533, II, do CC, salvo estipulação em contrário, as despesas do contrato de Permuta são divididas igualmente, mesmo havendo torna."
+            },
+            {
+                q: "O contrato de Mútuo possui qual característica que o Comodato não compartilha?",
+                options: [
+                    "É um contrato Real.",
+                    "Pode ser classificado como Oneroso (Mútuo Feneratício).",
+                    "A obrigação recai apenas sobre uma das partes.",
+                    "O objeto é uma coisa Infungível.",
+                    "A necessidade de devolução da coisa emprestada."
+                ],
+                answer: 1,
+                explanation: "O Mútuo pode ser oneroso (com juros), enquanto o Comodato é SEMPRE gratuito, sob pena de se converter em Locação se fosse cobrado algo pelo uso."
+            },
+            {
+                q: "Em relação ao Comodato, assinale a afirmação CORRETA:",
+                options: [
+                    "O comodatário adquire a propriedade da coisa emprestada.",
+                    "Pode ter como objeto bens fungíveis, desde que sejam devolvidos outros do mesmo tipo.",
+                    "É um contrato Real e sempre Gratuito.",
+                    "O comodatário não responde por danos se usar a coisa para salvar seus próprios bens, pois se trata de estado de necessidade.",
+                    "O comodatário tem a obrigação de indenizar benfeitorias voluptuárias."
+                ],
+                answer: 2,
+                explanation: "O Comodato é Real (depende da entrega) e é a essência do empréstimo de uso ser Gratuito. O comodatário detém apenas a posse, e o objeto é infungível."
+            },
+            {
+                q: "Qual tipo de Doação é nula se não houver reserva de parte ou renda suficiente para a subsistência do doador?",
+                options: [
+                    "Doação Modal.",
+                    "Doação Pura.",
+                    "Doação Remuneratória.",
+                    "Doação Universal.",
+                    "Doação a Termo."
+                ],
+                answer: 3,
+                explanation: "A Doação Universal é nula se abranger todos os bens do doador sem reserva de parte ou renda para sua subsistência (art. 548 do CC), preservando o mínimo existencial."
+            },
+            {
+                q: "Na Locação, o locatário tem direito à indenização e ao direito de retenção pelas benfeitorias:",
+                options: [
+                    "Apenas necessárias.",
+                    "Úteis e voluptuárias.",
+                    "Apenas voluptuárias.",
+                    "Necessárias e Úteis (desde que estas últimas sejam autorizadas).",
+                    "Apenas úteis, independentemente de autorização."
+                ],
+                answer: 3,
+                explanation: "O locatário tem direito à indenização e retenção pelas benfeitorias necessárias e pelas úteis, desde que estas tenham sido autorizadas. As voluptuárias apenas podem ser levantadas."
+            },
+            {
+                q: "A perda da posse ou propriedade da coisa em razão de sentença judicial que reconhece direito anterior de terceiro (evictor) sobre a coisa é o conceito de:",
+                options: [
+                    "Vício Redibitório.",
+                    "Cláusula de Retrovenda.",
+                    "Evicção.",
+                    "Perda da Torna.",
+                    "Inexecução de Encargo."
+                ],
+                answer: 2,
+                explanation: "Evicção é a perda da coisa em virtude de Defeito no Direito/Título, decorrente de uma decisão judicial que reconhece direito anterior de terceiro."
+            },
+            {
+                q: "O que é o contrato de Mútuo em essência?",
+                options: [
+                    "Empréstimo de uso de coisa infungível.",
+                    "Cessão temporária de uso mediante aluguel.",
+                    "Empréstimo de consumo de coisa fungível.",
+                    "Troca de bens com torna.",
+                    "Contrato de liberalidade."
+                ],
+                answer: 2,
+                explanation: "Mútuo é o empréstimo de consumo (coisa fungível), onde o mutuário se torna dono e devolve equivalente."
+            },
+            {
+                q: "Assinale a alternativa que contém a dupla de características CORRETA para o contrato de COMODATO:",
+                options: [
+                    "Consensual e Oneroso.",
+                    "Real e Unilateral.",
+                    "Real e Bilateral.",
+                    "Consensual e Gratuito.",
+                    "Não Translativo e Feneratício."
+                ]
+                ,
+                answer: 1,
+                explanation: "Comodato é REAL (só se aperfeiçoa com a entrega) e UNILATERAL (obrigações recaem principalmente no comodatário)."
+            },
+            {
+                q: "A revogação de uma Doação por inexecução de encargo é aplicada a qual tipo de doação?",
+                options: [
+                    "Pura.",
+                    "Remuneratória.",
+                    "Universal.",
+                    "Modal.",
+                    "Comum."
+                ],
+                answer: 3,
+                explanation: "A revogação por inexecução de encargo aplica-se à Doação Modal (com encargo), conforme o art. 555 do CC."
+            },
+            {
+                q: "Na Compra e Venda, uma das principais obrigações do vendedor é responder por:",
+                options: [
+                    "Benfeitorias úteis.",
+                    "Juros no Mútuo.",
+                    "Vícios Redibitórios e Evicção.",
+                    "Aumento de área na venda ad mensuram.",
+                    "Despesas de registro na permuta."
+                ],
+                answer: 2,
+                explanation: "A responsabilidade pela Evicção (perda judicial da coisa) e Vícios Redibitórios (defeitos ocultos) são obrigações clássicas do vendedor."
+            },
+            {
+                q: "A regra de que o contrato de Mútuo implica a transferência da propriedade da coisa ao mutuário se deve ao fato de que o objeto é:",
+                options: [
+                    "Infungível.",
+                    "Imóvel.",
+                    "Acessório.",
+                    "Fungível.",
+                    "Gratuito."
+                ],
+                answer: 3,
+                explanation: "Por se tratar de coisa fungível (consumível), o mutuário se torna seu dono e deve devolver outra do mesmo gênero, qualidade e quantidade, o que exige a transferência da propriedade."
+            },
+            {
+                q: "Um contrato de empréstimo de uso de um veículo específico, SEM custo, é classificado como:",
+                options: [
+                    "Mútuo.",
+                    "Locação.",
+                    "Permuta.",
+                    "Doação.",
+                    "Comodato."
+                ],
+                answer: 4,
+                explanation: "É um empréstimo (uso), gratuito (sem custo) e o objeto é infungível (o veículo específico), o que define o Comodato."
+            },
+            {
+                q: "A Lei 8.245/91 (Lei do Inquilinato) rege, prioritariamente, os contratos de:",
+                options: [
+                    "Locação de bens móveis.",
+                    "Locação de imóveis rurais (Estatuto da Terra).",
+                    "Locação de imóveis urbanos.",
+                    "Comodato com encargo.",
+                    "Mútuo feneratício."
+                ],
+                answer: 2,
+                explanation: "A Lei 8.245/91 é a legislação específica para a Locação de Imóveis Urbanos. A locação de bens móveis e rurais é regida por outras normas."
+            },
+            {
+                q: "A diferença fundamental entre Mútuo e Comodato reside na fungibilidade do objeto. Se o contrato for de Mútuo, o objeto será:",
+                options: [
+                    "Infungível e inconsumível.",
+                    "Infungível e consumível.",
+                    "Fungível e inconsumível.",
+                    "Fungível e consumível.",
+                    "Imóvel e incomercializável."
+                ],
+                answer: 3,
+                explanation: "O Mútuo é empréstimo de consumo, e seu objeto deve ser Fungível (como dinheiro ou grãos). O Comodato é empréstimo de uso, e seu objeto é Infungível."
+            },
+            {
+                q: "Em qual contrato, se houver o propósito de venda futura, o comprador deve oferecer a coisa primeiramente ao vendedor original (Cláusula de Preempção)?",
+                options: [
+                    "Doação Modal.",
+                    "Permuta.",
+                    "Compra e Venda.",
+                    "Mútuo.",
+                    "Comodato."
+                ],
+                answer: 2,
+                explanation: "A Preempção (ou Preferência) é uma cláusula especial da Compra e Venda, que obriga o comprador a dar preferência ao vendedor original, caso queira revender a coisa."
+            },
+            {
+                q: "Um bem é trocado por outro bem, mais uma 'torna' de R$ 1.000. Se o primeiro bem vale R$ 5.000 e o segundo vale R$ 6.000, o contrato é classificado como:",
+                options: [
+                    "Compra e Venda, pois há dinheiro envolvido.",
+                    "Doação Mista.",
+                    "Permuta, pois a torna é acessória e inferior ao valor de ambos os bens.",
+                    "Permuta com Cláusula de Retrovenda.",
+                    "Mútuo Oneroso."
+                ],
+                answer: 2,
+                explanation: "A torna de R$ 1.000 é acessória e pequena em relação aos bens (R$ 5.000 e R$ 6.000). A essência do negócio continua sendo a troca, caracterizando a Permuta."
+            },
+            {
+                q: "Na Locação, se o locatário realizar uma benfeitoria voluptuária, qual é o seu direito?",
+                options: [
+                    "Indenização e Retenção.",
+                    "Apenas Indenização.",
+                    "Apenas o direito de Retenção.",
+                    "Direito de Levantamento (Retirada) sem indenização, se não danificar a coisa.",
+                    "Nenhum direito, sendo a benfeitoria incorporada ao bem sem compensação."
+                ],
+                answer: 3,
+                explanation: "Benfeitorias voluptuárias (melhorias de recreio ou deleite) não são indenizáveis, mas podem ser retiradas (levantadas) pelo locatário, desde que não causem dano à coisa (art. 578, § 1º, CC)."
+            },
+            {
+                q: "A Doação Universal é nula por proibir a doação de todos os bens do doador. O que é necessário reservar para que a doação seja válida?",
+                options: [
+                    "Um imóvel residencial.",
+                    "Pelo menos 50% do patrimônio líquido.",
+                    "Parte ou renda suficiente para a subsistência.",
+                    "Apenas bens móveis.",
+                    "Bens de valor superior a 30 salários mínimos."
+                ],
+                answer: 2,
+                explanation: "O art. 548 do CC estabelece que é nula a doação de todos os bens sem reserva de parte, ou renda suficiente para a subsistência do doador."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        const quizList = document.getElementById('questions-list');
+        const scoreElement = document.getElementById('score');
+        const questionsState = new Array(questions.length).fill(false); // true se respondida
+
+        /**
+         * Renderiza todas as questões na interface.
+         */
+        function renderQuiz() {
+            quizList.innerHTML = ''; // Limpa a lista
+            questions.forEach((qData, index) => {
+                const questionElement = document.createElement('div');
+                questionElement.className = 'p-6 border border-gray-200 rounded-lg shadow-md bg-white transition duration-300';
+                questionElement.id = `q-${index}`;
+
+                // Título da Questão
+                questionElement.innerHTML = `
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800">Questão ${index + 1}:</h4>
+                    <p class="mb-5 text-lg font-medium text-gray-700">${qData.q}</p>
+                    <div id="options-${index}" class="space-y-3">
+                        ${qData.options.map((option, i) => `
+                            <div id="opt-${index}-${i}" class="quiz-option p-3 border rounded-md transition duration-150 border-gray-300" 
+                                onclick="checkAnswer(${index}, ${i})">
+                                <span class="font-extrabold text-indigo-700">${String.fromCharCode(65 + i)})</span> ${option}
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div id="feedback-${index}" class="mt-4 p-3 rounded-lg hidden"></div>
+                `;
+                quizList.appendChild(questionElement);
+            });
+        }
+
+        /**
+         * Verifica a resposta selecionada.
+         * @param {number} qIndex - Índice da questão.
+         * @param {number} selectedOptionIndex - Índice da opção selecionada.
+         */
+        function checkAnswer(qIndex, selectedOptionIndex) {
+            if (questionsState[qIndex]) return; // Impede dupla resposta
+
+            questionsState[qIndex] = true;
+            const qData = questions[qIndex];
+            const optionsContainer = document.getElementById(`options-${qIndex}`);
+            const feedbackElement = document.getElementById(`feedback-${qIndex}`);
+
+            // Desabilita cliques em todas as opções desta questão
+            Array.from(optionsContainer.children).forEach(opt => {
+                opt.classList.add('disabled');
+            });
+
+            // Adiciona classe CSS para feedback visual
+            const selectedOptElement = document.getElementById(`opt-${qIndex}-${selectedOptionIndex}`);
+            const correctOptElement = document.getElementById(`opt-${qIndex}-${qData.answer}`);
+
+            if (selectedOptionIndex === qData.answer) {
+                // Resposta Correta
+                selectedOptElement.classList.add('correct');
+                score++;
+                feedbackElement.classList.remove('hidden');
+                feedbackElement.classList.add('bg-green-100', 'border-l-4', 'border-green-600', 'text-green-800');
+                feedbackElement.innerHTML = `<span class="font-extrabold">Correto!</span> ${qData.explanation}`;
+            } else {
+                // Resposta Incorreta
+                selectedOptElement.classList.add('incorrect');
+                correctOptElement.classList.add('correct'); // Mostra a correta
+                feedbackElement.classList.remove('hidden');
+                feedbackElement.classList.add('bg-red-100', 'border-l-4', 'border-red-600', 'text-red-800');
+                feedbackElement.innerHTML = `<span class="font-extrabold">Incorreto.</span> A resposta correta é a <span class="font-extrabold">${String.fromCharCode(65 + qData.answer)})</span>. ${qData.explanation}`;
+            }
+
+            // Atualiza a pontuação
+            scoreElement.textContent = score;
+        }
+
+        /**
+         * Reinicia o quiz.
+         */
+        function resetQuiz() {
+            score = 0;
+            scoreElement.textContent = 0;
+            questionsState.fill(false);
+            renderQuiz();
+            alert('Questionário Reiniciado! Boa sorte na próxima rodada.');
+        }
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+            renderQuiz();
+        });
+    </script>
+</body>
+</html>
