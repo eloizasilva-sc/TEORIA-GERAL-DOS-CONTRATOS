@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revisão de Teoria Geral dos Contratos - AV 2</title>
+    <title>Revisão de Teoria Geral dos Contratos - AV2</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -26,7 +26,7 @@
             transition: max-height 0.4s ease-out, padding 0.4s ease-out;
         }
         .content-visible {
-            max-height: 3000px; /* Suficientemente grande */
+            max-height: 5000px; /* Aumentado para acomodar o novo conteúdo */
             padding-top: 16px; /* p-4 */
             padding-bottom: 16px; /* p-4 */
             transition: max-height 0.6s ease-in, padding 0.6s ease-in;
@@ -61,17 +61,34 @@
             border-radius: 0.5rem;
             margin-bottom: 1rem;
         }
+        /* Cores de Extinção */
+        .ext-normal {
+            border-left: 4px solid #4f46e5; /* indigo-600 */
+            background-color: #eef2ff; /* indigo-50 */
+        }
+        .ext-anormal {
+            border-left: 4px solid #dc2626; /* red-600 */
+            background-color: #fef2f2; /* red-50 */
+        }
+        .ext-example {
+            border-left: 3px solid #6b7280; /* gray-500 */
+            background-color: #f9fafb; /* gray-50 */
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem; /* sm */
+        }
     </style>
 </head>
 <body class="p-4 sm:p-8">
 
     <div class="max-w-5xl mx-auto">
         <header class="text-center mb-12 p-8 bg-white rounded-xl shadow-2xl border-b-4 border-indigo-600">
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-indigo-800">🎯 Revisão de Teoria Geral dos Contratos - AV 2</h1>
-            <p class="text-gray-600 mt-3 text-lg font-medium">Foco nas classificações e institutos mais cobrados pelo CC/02.</p>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-indigo-800">🎯 Revisão - Teoria Geral dos Contratos</h1>
+            <p class="text-gray-600 mt-3 text-lg font-medium">Foco nas classificações e institutos mais cobrados para AV2</p>
         </header>
 
-        <h2 class="text-2xl font-bold text-gray-700 mb-6 border-b pb-2">Seção 1: Contratos em espécies</h2>
+        <h2 class="text-2xl font-bold text-gray-700 mb-6 border-b pb-2">Seção 1: Conteúdo Didático</h2>
 
         <main id="review-system" class="space-y-8">
 
@@ -158,9 +175,9 @@
             <div class="contract-card bg-white rounded-xl shadow-lg overflow-hidden border-l-8 border-rose-500">
                 <div class="contract-header p-6 flex justify-between items-center bg-rose-50" onclick="toggleContent('contract-3')">
                     <h2 class="text-2xl font-extrabold text-rose-700">3. DOAÇÃO <span class="text-base font-normal">(arts. 538 a 564)</span></h2>
-                    <span id="icon-3" class="text-rose-700 text-3xl transform transition-transform duration-300 font-light">−</span>
+                    <span id="icon-3" class="text-rose-700 text-3xl transform transition-transform duration-300 font-light">+</span>
                 </div>
-                <div id="contract-3" class="contract-content content-visible px-6 text-gray-800">
+                <div id="contract-3" class="contract-content content-hidden px-6 text-gray-800">
                     <p class="mb-5 leading-relaxed border-b pb-4 text-sm italic text-gray-600">
                         Conceito: Ato de <span class="assertive">liberalidade</span> em que o Doador transfere bens ou vantagens para o Donatário, <span class="assertive">gratuitamente</span>.
                     </p>
@@ -300,6 +317,139 @@
                 </div>
             </div>
 
+            <!-- 7. EXTINÇÃO DOS CONTRATOS (Revisão Robusta - VIOLETA) -->
+            <div class="contract-card bg-white rounded-xl shadow-lg overflow-hidden border-l-8 border-violet-500">
+                <div class="contract-header p-6 flex justify-between items-center bg-violet-50" onclick="toggleContent('contract-7')">
+                    <h2 class="text-2xl font-extrabold text-violet-700">7. 📘 EXTINÇÃO DOS CONTRATOS – REVISÃO ROBUSTA <span class="text-base font-normal">(Tartuce + CC/02)</span></h2>
+                    <span id="icon-7" class="text-violet-700 text-3xl transform transition-transform duration-300 font-light">−</span>
+                </div>
+                <div id="contract-7" class="contract-content content-visible px-6 text-gray-800">
+                    <p class="mb-5 leading-relaxed border-b pb-4 text-sm italic text-gray-600">
+                        Estrutura didática focada nas formas de término do vínculo contratual: causas normais (desejadas ou naturais) e anormais (em função de vícios ou fatos supervenientes).
+                    </p>
+
+                    <!-- 1. EXTINÇÃO NORMAL -->
+                    <h3 class="font-bold text-xl text-violet-600 flex items-center mb-3 border-t pt-4">🟦 1. EXTINÇÃO NORMAL (CURSO REGULAR)</h3>
+                    <p class="text-sm italic text-gray-500 mb-4">Formas de término sem inadimplemento, vício ou evento anormal.</p>
+                    
+                    <div class="space-y-3">
+                        <div class="p-3 ext-normal">
+                            <p class="font-extrabold text-indigo-700 mb-1">1.1. Adimplemento (execução total)</p>
+                            <p class="text-sm"><span class="assertive">Ideia:</span> A prestação é cumprida integralmente, extinguindo o vínculo (arts. 304–388, CC).</p>
+                            <div class="ext-example">
+                                <span class="font-bold text-gray-700">Ex:</span> João entrega e Ana paga a reforma integralmente.
+                            </div>
+                        </div>
+                        <div class="p-3 ext-normal">
+                            <p class="font-extrabold text-indigo-700 mb-1">1.2. Termo final (contrato com prazo determinado)</p>
+                            <p class="text-sm"><span class="assertive">Ideia:</span> O contrato termina automaticamente no fim do prazo (arts. 121 e 132, CC).</p>
+                            <div class="ext-example">
+                                <span class="font-bold text-gray-700">Ex:</span> Locação por 12 meses, finda no último dia.
+                            </div>
+                        </div>
+                        <div class="p-3 ext-normal">
+                            <p class="font-extrabold text-indigo-700 mb-1">1.3. Distrato (acordo das partes)</p>
+                            <p class="text-sm"><span class="assertive">Ideia:</span> As partes celebram um novo contrato para desfazer o anterior (art. 472, CC).</p>
+                            <div class="ext-example">
+                                <span class="font-bold text-gray-700">Ex:</span> Empresas A e B assinam distrato escrito para encerrar projeto mútuo antes do prazo.
+                            </div>
+                        </div>
+                        <div class="p-3 ext-normal">
+                            <p class="font-extrabold text-indigo-700 mb-1">1.4. Resilição unilateral (denúncia) ⭐</p>
+                            <p class="text-sm"><span class="assertive">Ideia:</span> Ocorre por vontade de uma das partes quando a lei ou o contrato <span class="assertive text-violet-700">expressamente permite</span> (Art. 473 CC). <span class="font-bold text-indigo-800">É classificada como NORMAL porque não resulta de inadimplemento, culpa ou vício.</span></p>
+                            <div class="ext-example">
+                                <span class="font-bold text-gray-700">Ex:</span> Contratos de execução continuada sem prazo (e.g., mandato, seguro) onde a lei permite a denúncia, com prévio aviso.
+                            </div>
+                        </div>
+                        <div class="p-3 ext-normal">
+                            <p class="font-extrabold text-indigo-700 mb-1">1.5. Morte da pessoa – contratos <span class="assertive">intuitu personae</span></p>
+                            <p class="text-sm"><span class="assertive">Ideia:</span> A obrigação depende diretamente da pessoa e o falecimento a extingue.</p>
+                            <div class="ext-example">
+                                <span class="font-bold text-gray-700">Ex:</span> Falecimento de um pintor renomado contratado para fazer uma obra específica.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. EXTINÇÃO ANORMAL -->
+                    <h3 class="font-bold text-xl text-violet-600 flex items-center mb-3 border-t pt-4">🟥 2. EXTINÇÃO ANORMAL (CAUSAS EXTRAORDINÁRIAS)</h3>
+                    <p class="text-sm italic text-gray-500 mb-4">Ocorre por inadimplemento, desequilíbrio, vícios ou impossibilidade.</p>
+
+                    <div class="space-y-3">
+                        <!-- RESOLUÇÃO -->
+                        <div class="p-3 ext-anormal">
+                            <p class="font-extrabold text-red-700 mb-1">2.1.1. Resolução por <span class="assertive">inadimplemento</span></p>
+                            <p class="text-sm"><span class="assertive">Ideia:</span> Falta grave permite que a outra parte desfaça o contrato (art. 475, CC). Esta sim é uma sanção por <span class="assertive text-red-700">culpa</span>.</p>
+                            <div class="ext-example">
+                                <span class="font-bold text-gray-700">Ex:</span> Concessionária não entrega carro pago por Carlos. Carlos pede resolução + perdas e danos.
+                            </div>
+                        </div>
+                        <div class="p-3 ext-anormal">
+                            <p class="font-extrabold text-red-700 mb-1">2.1.2. Resolução por <span class="assertive">onerosidade excessiva</span></p>
+                            <p class="text-sm"><span class="assertive">Ideia:</span> Fato extraordinário e imprevisível torna a prestação inviável (arts. 317 e 478–480, CC).</p>
+                            <div class="ext-example">
+                                <span class="font-bold text-gray-700">Ex:</span> Guerra triplica o preço do trigo, tornando contrato de fornecimento a preço fixo excessivamente oneroso.
+                            </div>
+                        </div>
+                        <div class="p-3 ext-anormal">
+                            <p class="font-extrabold text-red-700 mb-1">2.1.3. Resolução por <span class="assertive">impossibilidade superveniente</span> da prestação</p>
+                            <p class="text-sm"><span class="assertive">Ideia:</span> A prestação se torna impossível por evento fora da vontade do devedor (arts. 234, 248 e 393, CC).</p>
+                            <div class="ext-example">
+                                <span class="font-bold text-gray-700">Ex:</span> Cavalo (objeto específico) morre antes da entrega devido a raio. Cantor sofre acidente e não pode se apresentar (contrato personalíssimo).
+                            </div>
+                        </div>
+                        <div class="p-3 ext-anormal">
+                            <p class="font-extrabold text-red-700 mb-1">2.1.4. <span class="assertive">Caso fortuito e força maior</span></p>
+                            <p class="text-sm"><span class="assertive">Ideia:</span> Fato inevitável e imprevisível que impede o cumprimento (art. 393, CC).</p>
+                            <div class="ext-example">
+                                <span class="font-bold text-gray-700">Ex:</span> Enchente destrói mercadorias que seriam entregues (se o devedor não estava em mora).
+                            </div>
+                        </div>
+                        
+                        <!-- RESCISÃO E REVISÃO -->
+                        <div class="p-3 bg-red-100 rounded-lg border-l-4 border-red-500">
+                            <p class="font-extrabold text-red-700 mb-1">2.2. RESCISÃO (vícios do negócio jurídico)</p>
+                            <p class="text-sm"><span class="assertive">Ideia:</span> Desfazimento por vício na formação do contrato (Dolo, Coação, Erro, etc.) (arts. 138–165, CC).</p>
+                            <div class="ext-example">
+                                <span class="font-bold text-gray-700">Ex:</span> Vendedor esconde dolosamente um vício estrutural grave em um imóvel.
+                            </div>
+                        </div>
+                        <div class="p-3 bg-red-100 rounded-lg border-l-4 border-red-500">
+                            <p class="font-extrabold text-red-700 mb-1">2.3. REVISÃO CONTRATUAL</p>
+                            <p class="text-sm"><span class="assertive">Ideia:</span> Ajustar o contrato para preservar sua função social, geralmente após onerosidade excessiva (arts. 317 e 478–480, CC).</p>
+                            <div class="ext-example">
+                                <span class="font-bold text-gray-700">Ex:</span> Juiz revisa parcelas de financiamento após alta anormal e imprevisível do dólar.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. QUADRO FINAL DE MEMORIZAÇÃO -->
+                    <h3 class="font-bold text-xl text-violet-600 flex items-center mb-3 border-t pt-4">📌 3. QUADRO FINAL DE MEMORIZAÇÃO</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-indigo-100 rounded-lg shadow-sm border border-indigo-300">
+                            <h4 class="font-extrabold text-indigo-800 mb-2">EXTINÇÃO NORMAL (Termo Natural)</h4>
+                            <ul class="list-none space-y-1 text-sm">
+                                <li>✔ <span class="assertive">Adimplemento:</span> Prestação cumprida.</li>
+                                <li>✔ <span class="assertive">Termo final:</span> Prazo encerrado.</li>
+                                <li>✔ <span class="assertive">Distrato:</span> Acordo para terminar.</li>
+                                <li>✔ <span class="assertive">Resilição unilateral:</span> Denúncia permitida, sem culpa.</li>
+                                <li>✔ <span class="assertive">Morte:</span> Contratos personalíssimos.</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-red-100 rounded-lg shadow-sm border border-red-300">
+                            <h4 class="font-extrabold text-red-800 mb-2">EXTINÇÃO ANORMAL (Ruptura/Vício)</h4>
+                            <ul class="list-none space-y-1 text-sm">
+                                <li>❌ <span class="assertive">Resolução por inadimplemento:</span> Falta grave/culpa.</li>
+                                <li>❌ <span class="assertive">Resolução por onerosidade:</span> Desequilíbrio imprevisível.</li>
+                                <li>❌ <span class="assertive">Resolução por impossibilidade:</span> Prestação se torna impossível.</li>
+                                <li>❌ <span class="assertive">Rescisão:</span> Vícios (dolo, coação, erro etc.).</li>
+                                <li>❌ <span class="assertive">Revisão:</span> Ajuste para preservar o contrato (alternativa à resolução).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </main>
 
         <!-- SEÇÃO DE QUESTÕES DE PROVA -->
@@ -307,7 +457,7 @@
 
         <div id="quiz-container" class="bg-white p-6 sm:p-8 rounded-xl shadow-2xl">
             <div id="quiz-progress" class="mb-6">
-                <p class="text-lg font-bold text-indigo-600">Pontuação: <span id="score">0</span> / 20</p>
+                <p class="text-lg font-bold text-indigo-600">Pontuação: <span id="score">0</span> / 25</p>
             </div>
             <div id="questions-list" class="space-y-8">
                 <!-- Questions will be dynamically inserted here -->
@@ -602,6 +752,67 @@
                 ],
                 answer: 2,
                 explanation: "O art. 548 do CC estabelece que é nula a doação de todos os bens sem reserva de parte, ou renda suficiente para a subsistência do doador."
+            },
+            // --- NOVAS QUESTÕES SOBRE EXTINÇÃO DOS CONTRATOS (5 Adicionais) ---
+            {
+                q: "A Resilição Unilateral (Denúncia) é considerada, pela doutrina majoritária, uma forma de extinção NORMAL do contrato porque:",
+                options: [
+                    "Somente pode ocorrer em contratos bilaterais com cláusula resolutiva expressa.",
+                    "É uma sanção imposta por quebra de dever lateral ou inadimplemento culposo.",
+                    "Não decorre de inadimplemento, vício ou culpa, mas sim do exercício de uma faculdade legal ou convencional.",
+                    "Exige sentença judicial transitada em julgado para produzir efeitos.",
+                    "É um sinônimo exato de Resolução por onerosidade excessiva."
+                ],
+                answer: 2,
+                explanation: "A Resilição Unilateral é NORMAL pois representa o exercício de um direito potestativo (denúncia), previsto em lei ou contrato, para terminar o vínculo sem culpa ou inadimplemento da outra parte (Art. 473 CC)."
+            },
+            {
+                q: "Qual instituto se aplica ao desfazimento do contrato por vício que o inquina desde a sua formação (como erro, dolo ou coação)?",
+                options: [
+                    "Resolução por inadimplemento.",
+                    "Resilição bilateral (Distrato).",
+                    "Rescisão.",
+                    "Mora Purgação.",
+                    "Teoria da Imprevisão (Revisão Contratual)."
+                ],
+                answer: 2,
+                explanation: "No Direito Civil, 'Rescisão' (em sentido estrito) refere-se à extinção do contrato por vício ou lesão no momento de sua formação (vício do negócio jurídico)."
+            },
+            {
+                q: "A Resolução por Onerosidade Excessiva exige a ocorrência de qual requisito principal, além do desequilíbrio na prestação?",
+                options: [
+                    "A morte de uma das partes.",
+                    "O mútuo acordo dos contratantes.",
+                    "O Distrato formalizado em cartório.",
+                    "Evento extraordinário e imprevisível que gere a desproporção.",
+                    "A culpa grave de uma das partes na execução."
+                ],
+                answer: 3,
+                explanation: "A Teoria da Imprevisão (base da Resolução por Onerosidade Excessiva) exige um evento superveniente, extraordinário e imprevisível, que altere a base econômica do contrato (Art. 478 CC)."
+            },
+            {
+                q: "Conforme o art. 472 do CC, o Distrato deve ser feito:",
+                options: [
+                    "Por meio de notificação judicial obrigatória.",
+                    "Sempre por instrumento público, independentemente da forma do contrato original.",
+                    "Pela mesma forma exigida para o contrato a ser desfeito.",
+                    "Verbalmente, desde que haja testemunhas.",
+                    "Apenas quando o contrato original tiver prazo indeterminado."
+                ],
+                answer: 2,
+                explanation: "O Distrato faz-se pela mesma forma exigida para o contrato (princípio da simetria das formas). Se o contrato de compra e venda de imóvel foi feito por escritura pública, o distrato também deverá ser."
+            },
+            {
+                q: "Em um contrato de prestação de serviços de arquitetura, a morte do arquiteto contratado pode levar à extinção do contrato, sendo esta classificada como extinção NORMAL. Por que isso ocorre?",
+                options: [
+                    "Porque o contrato de arquitetura é sempre gratuito.",
+                    "Porque contratos de serviços são sempre resolúveis por onerosidade.",
+                    "Porque a execução dependia das qualidades pessoais do arquiteto (contrato 'intuitu personae').",
+                    "Porque a morte é um caso fortuito que sempre gera Resolução Anormal.",
+                    "A morte só extingue contratos de doação e mútuo."
+                ],
+                answer: 2,
+                explanation: "Nos contratos 'intuitu personae' (feitos em consideração à pessoa), o falecimento é uma causa natural de extinção do vínculo, sendo, portanto, considerada uma forma NORMAL de término."
             }
         ];
 
@@ -689,24 +900,22 @@
             scoreElement.textContent = 0;
             questionsState.fill(false);
             renderQuiz();
-            alert('Questionário Reiniciado! Boa sorte na próxima rodada.');
+            // Use uma mensagem de feedback na UI em vez de alert()
+            const messageElement = document.createElement('div');
+            messageElement.className = 'mt-4 p-3 bg-yellow-100 border border-yellow-300 text-yellow-800 rounded-lg text-center';
+            messageElement.textContent = 'Questionário Reiniciado! Boa sorte na próxima rodada.';
+            quizList.parentNode.insertBefore(messageElement, quizList.nextSibling);
+            setTimeout(() => messageElement.remove(), 3000);
         }
 
         // Inicialização
         document.addEventListener('DOMContentLoaded', () => {
+            // Atualiza o total de questões
+            document.getElementById('quiz-progress').querySelector('span:last-child').textContent = questions.length;
             renderQuiz();
+            // O estado inicial de contract-7 já é 'content-visible' e '−'
         });
     </script>
 </body>
-<footer class="rodape-sistema">
-    <p>
-        &copy; 2025 - Desenvolvido por Eloiza Silva
-    </p>
-    <p>
-        
-    </p>
-</footer> 
+    @copy Desenvolvido por Eloiza Silva
 </html>
-
-
-
